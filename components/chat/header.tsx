@@ -6,7 +6,7 @@ import { AI_NAME } from "@/configuration/identity";
 
 export const AILogo = () => (
   <div className="w-12 h-12 relative">
-    <Image src="/leonardo dicapital-modified.png" alt={AI_NAME} width={120} height={120} />
+    <Image src="/leonardo dicapital-modified.png" alt={AI_NAME} width={300} height={300} />
     <div className="w-3 h-3 rounded-full bg-green-500 absolute -bottom-0 -right-0 transform translate-x-0 translate-y-0"></div>
   </div>
 );
