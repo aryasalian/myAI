@@ -23,16 +23,18 @@ const tinosReg = localFont({
   weight: "100 900",
 });
 
-const zainLight = localFont({
-  src: "./fonts/Zain-Light.ttf",
-  variable: "--font-zain-light",
-  weight: "100 900",
-});
-
-const zainReg = localFont({
-  src: "./fonts/Zain-Regular.ttf",
-  variable: "--font-zain-reg",
-  weight: "100 900",
+const zain = localFont({
+  src: [
+    {
+      path: "./fonts/Zain-Light.ttf",
+      weight: "400",
+    },
+    {
+      path: "./fonts/Zain-Regular.ttf",
+      weight: "700",
+    }
+  ],
+  variable: "--font-zain",
 });
 
 export const metadata: Metadata = {
@@ -49,7 +51,7 @@ export default function RootLayout({
     <html lang="en">
       <TooltipProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} ${tinosReg.variable} ${zainLight.variable} ${zainReg.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} ${tinosReg.variable} ${zain.variable} antialiased`}
         >
           <ErrorWrapper>{children}</ErrorWrapper>
         </body>
