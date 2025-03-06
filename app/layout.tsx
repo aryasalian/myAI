@@ -6,7 +6,7 @@ import { ErrorWrapper } from "./parts/error/error-wrapper";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 const geistSans = localFont({
-  src: "./fonts/Tinos-Regular.ttf",
+  src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
@@ -14,6 +14,24 @@ const geistSans = localFont({
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
+  weight: "100 900",
+});
+
+const tinosReg = localFont({
+  src: "./fonts/Tinos-Regular.ttf",
+  variable: "--font-tinos-reg",
+  weight: "100 900",
+});
+
+const zainLight = localFont({
+  src: "./fonts/Zain-Light.ttf",
+  variable: "--font-zain-light",
+  weight: "100 900",
+});
+
+const zainReg = localFont({
+  src: "./fonts/Zain-Regular.ttf",
+  variable: "--font-zain-reg",
   weight: "100 900",
 });
 
