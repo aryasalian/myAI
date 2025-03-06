@@ -27,10 +27,14 @@ const zain = localFont({
   src: [
     {
       path: "./fonts/Zain-Light.ttf",
-      weight: "400",
+      weight: "100",
     },
     {
       path: "./fonts/Zain-Regular.ttf",
+      weight: "400",
+    }
+    {
+      path: "./fonts/Zain-Bold.ttf",
       weight: "700",
     }
   ],
