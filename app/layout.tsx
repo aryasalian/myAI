@@ -6,7 +6,7 @@ import { ErrorWrapper } from "./parts/error/error-wrapper";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "./fonts/Tinos-Regular.ttf",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
