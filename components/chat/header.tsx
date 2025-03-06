@@ -4,6 +4,9 @@ import Image from "next/image";
 import { CHAT_HEADER, CLEAR_BUTTON_TEXT } from "@/configuration/ui";
 import { AI_NAME } from "@/configuration/identity";
 
+import { useTheme } from "next-themes";
+import React, { useEffect, useState } from "react";
+
 export const AILogo = () => (
   <div className="w-12 h-12 relative">
     <Image src="/leonardo dicapital-modified.png" alt={AI_NAME} width={300} height={300} />
@@ -16,6 +19,15 @@ export default function ChatHeader({
 }: {
   clearMessages: () => void;
 }) {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false); // initializes a local state variable called mounted to false
+
+  // Ensure this component only renders on the client to avoid hydration errors.
+  useEffect(() => {  // useEffect hook runs after the component is mounted so can be used to update state once mounted
+    setMounted(true);
+  }, []);
+  if (!mounted) return null;
+  
   return (
     <div className="z-10 flex justify-center items-center fixed top-0 w-full p-5 bg-white shadow-[0_10px_15px_-3px_rgba(255,255,255,1)]">
       <div className="flex w-full">
@@ -33,6 +45,14 @@ export default function ChatHeader({
           >
             <EraserIcon className="w-4 h-4" />
             <span>{CLEAR_BUTTON_TEXT}</span>
+          </Button>
+          <Button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="gap-2 shadow-sm"
+            variant="outline"
+            size="sm"
+          >
+            <span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
           </Button>
         </div>
       </div>
