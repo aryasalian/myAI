@@ -9,7 +9,7 @@ const config: Config = {
   ],
   theme: {
   	extend: {
-        fontSize: {
+            fontSize: {
                     base: '1.25rem', // this adds/overrides the text-base size
                 },
   		colors: {
