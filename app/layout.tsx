@@ -32,7 +32,7 @@ const zain = localFont({
     {
       path: "./fonts/Zain-Regular.ttf",
       weight: "400",
-    }
+    },
     {
       path: "./fonts/Zain-Bold.ttf",
       weight: "700",
