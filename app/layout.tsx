@@ -17,17 +17,15 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const tinosReg = localFont({
-  src: "./fonts/Tinos-Regular.ttf",
-  variable: "--font-tinos-reg",
-  weight: "100 900",
-});
-
 const zain = localFont({
   src: [
     {
-      path: "./fonts/Zain-Light.ttf",
+      path: "./fonts/Zain-ExtraLight.ttf",
       weight: "100",
+    },
+    {
+      path: "./fonts/Zain-Light.ttf",
+      weight: "250",
     },
     {
       path: "./fonts/Zain-Regular.ttf",
@@ -35,8 +33,17 @@ const zain = localFont({
     },
     {
       path: "./fonts/Zain-Bold.ttf",
-      weight: "700",
+      weight: "600",
+    },
+    {
+      path: "./fonts/Zain-ExtraBold.ttf",
+      weight: "750",
+    },
+    {
+      path: "./fonts/Zain-Black.ttf",
+      weight: "900",
     }
+    
   ],
   variable: "--font-zain",
 });
@@ -55,7 +62,7 @@ export default function RootLayout({
     <html lang="en">
       <TooltipProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} ${tinosReg.variable} ${zain.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} ${zain.variable} antialiased`}
         >
           <ErrorWrapper>{children}</ErrorWrapper>
         </body>
