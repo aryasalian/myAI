@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+        fontSize: {
+            base: "1.25rem", // overrides text-base
+            sm: "1rem",
+        },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
