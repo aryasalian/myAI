@@ -11,7 +11,8 @@ const config: Config = {
   	extend: {
         fontSize: {
             base: "1.25rem", // overrides text-base
-            sm: "1rem",
+            sm: "1.15rem",
+            xs: "0.875rem"
         },
   		colors: {
   			background: 'hsl(var(--background))',
