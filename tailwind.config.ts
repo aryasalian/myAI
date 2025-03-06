@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+        fontSize: {
+                    base: '1.25rem', // this adds/overrides the text-base size
+                },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
