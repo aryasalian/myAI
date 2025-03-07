@@ -45,7 +45,8 @@ function AssistantMessage({ message }: { message: DisplayMessage }) {
       <motion.div
         whileHover={{ scale: 1.01 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="px-3 py-1 bg-[hsl(var(--response-bg))] rounded-2xl text-[hsl(250, 22%, 18%)] max-w-[60%] shadow-sm hover:shadow-md transition-shadow duration-300"
+        style={{ color: "hsl(250, 22%, 18%)" }}
+        className="px-3 py-1 bg-[hsl(var(--response-bg))] rounded-2xl max-w-[60%] shadow-sm hover:shadow-md transition-shadow duration-300"
       >
         <Formatting message={message} />
       </motion.div>
