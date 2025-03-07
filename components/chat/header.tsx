@@ -47,7 +47,11 @@ export default function ChatHeader({
             <span>{CLEAR_BUTTON_TEXT}</span>
           </Button>
           <Button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() => {
+              const newTheme = theme === "dark" ? "light" : "dark";
+              setTheme(newTheme);
+              console.log("Theme switched to:", newTheme);
+            }}
             className="gap-2 shadow-sm"
             variant="outline"
             size="sm"
