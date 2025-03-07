@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { EraserIcon } from "lucide-react";
+import { EraserIcon, LightbulbIcon } from "lucide-react";
 import Image from "next/image";
 import { CHAT_HEADER, CLEAR_BUTTON_TEXT } from "@/configuration/ui";
 import { AI_NAME } from "@/configuration/identity";
@@ -56,6 +56,7 @@ export default function ChatHeader({
             variant="outline"
             size="sm"
           >
+            <LightbulbIcon className="w-4 h-4" />
             <span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
           </Button>
         </div>
