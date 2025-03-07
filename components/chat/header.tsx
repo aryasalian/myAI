@@ -52,7 +52,7 @@ export default function ChatHeader({
               setTheme(newTheme);
               console.log("Theme switched to:", newTheme);
             }}
-            className="ml-4 gap-2 shadow-sm"
+            className="ml-2 gap-2 shadow-sm"
             variant="outline"
             size="sm"
           >
